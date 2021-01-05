@@ -4,7 +4,7 @@ _start:
     mov       rax, 1
     mov       rdi, 1
     mov       rsi, message
-    mov       rdx, 13
+    mov       rdx, 34
     syscall
     mov       rax, 60
     xor       rdi, rdi
@@ -12,3 +12,4 @@ _start:
     section   .data
 message:
     db        "Hello, World", 10
+    db        "My name is SeungJun", 10
