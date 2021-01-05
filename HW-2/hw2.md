@@ -55,7 +55,7 @@ _start:
     mov       rdx, 13   ; 13을 rdx register에 저장 
 ```
 피상적으로 봤을 때는 위의 코드는 아무 의미가 없는 코드이다. ~~우리를 괴롭히려고 넣은게 분명하다.~~ 하지만 그 다음 instruction을 보면 위의 작업이 왜 필요한지 알게 될 것이다.
-```assmebly
+```assembly
 syscall
 ```
 [Linux System call table](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/) 을 살펴보면 rax register를 1로 초기화 시키는 것은 syscall에서 sys_write를 사용한다는 뜻이다. 
