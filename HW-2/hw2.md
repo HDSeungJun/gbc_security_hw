@@ -198,7 +198,7 @@ _start:
 ```
 코드에 주석을 달았지만 추가설명이 필요할 것 같다. strlen 함수를 호출하기 전에 rdi msg를 저장하였다. 그리고 strlen 함수 처음은 `mov rax, 0`이다. ~~즉, strlen 함수는 msg를 읽는 것이다.~~ 
 
-```
+```assembly
 section .data
     msg db "hello",0xA,0        
     len db 0,0xA         
