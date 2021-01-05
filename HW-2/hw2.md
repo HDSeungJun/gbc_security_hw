@@ -90,6 +90,7 @@ sys_exit으로 설정을 하고 syscall을 한 번 더 했기 때문에 프로�
 ~~즉, 쓸 데 없이 우리를 괴롭히려고 작성한 코드는 하나도 없었다. 외쳐 갓찬솔~!!~~
 
 이렇게 프로그램은 끝나지만 파일에는 남아있는 코드들이 있다.
+
 ```assembly
 section   .data
 message:
@@ -250,7 +251,7 @@ My name is {자신의이름}
 <summary>hello_name.asm 코드</summary>
 <div markdown="1">
 
-```
+```assembly
  global    _start
 section   .text
 _start:
