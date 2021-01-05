@@ -61,7 +61,7 @@ syscall
 [Linux System call table](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/) 을 살펴보면 rax register를 1로 초기화 시키는 것은 syscall에서 sys_write를 사용한다는 뜻이다. 
 |%rax|System call|%rdi|%rsi|%rdx|
 |:---:|:---:|:---:|:---:|:---:|:---:|
-|1|sys_write|unsigned int fd|const char *buf|size_t count
+|1|sys_write|unsigned int fd|const char *buf|size_t count|
 (sys_write는 C언어의 write()함수와 동일한 기능을 한다고 생각하면 편할 것이다.)
 
 이 사실을 알고 나서 위의 `mov` instcutions를 보면 왜 굳이 위의 작업을 했는지 알 수 있을 것이다. sys_write를 하기 위해 rax register를 1로, rdi register를 unsigned int인 1로, rsi register를  출력할 data인 message로, rdx register에는 message의 크기인 13으로 초기화 시켜준 것이다. 
@@ -79,11 +79,11 @@ rax를 60, rdi에는 rdi XOR rdi 결과 즉, `1 XOR 1 = 0`으로 초기화 시�
 ![XOR Truth table](https://codespeedy.com/wp-content/uploads/2019/08/Screenshot-from-2019-08-04-12-01-49.png)
 
 [table](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/)을 보면 알겠지만 rax를 60으로 초기화하는 것은 sys_exit을 한다는 것이다. 
-|%rax|System call|%rdi
-|:---:|:---:|:---:|:---:
-|60|sys_exit|int error_code
+|%rax|System call|%rdi|
+|:---:|:---:|:---:|:---:|
+|60|sys_exit|int error_code|
 sys_exit으로 설정을 하고 syscall을 한 번 더 했기 때문에 프로그램이 정상적으로 종료될 수 있었던 것이다. 
-~~즉, 쓸 데 없이 우리를 괴롭히려고 작성한 코드는 하나도 없었다. 외쳐 갓찬솔~~
+~~즉, 쓸 데 없이 우리를 괴롭히려고 작성한 코드는 하나도 없었다. 외쳐 갓찬솔~!! ~~
 
 이렇게 프로그램은 끝나지만 파일에는 남아있는 코드들이 있다.
 ```assembly
