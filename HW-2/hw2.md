@@ -281,7 +281,7 @@ message:
 Hello, World
 My name is chansol
 ```
-~~제가 하긴 했는데 제가 한 건 아닙니다...~~~
+~~제가 하긴 했는데 제가 한 건 아닙니다...~~
 <details>
 <summary>hello_option.asm 코드</summary>
 <div markdown="1">
