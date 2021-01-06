@@ -9,6 +9,8 @@
     - Virtual memory에서 Stack 영역과 Heap 영역은 절대로(거의) 만나지 않게 하기 위하여 Stack 영역과 Heap 영역 사이에 빈 공간을 크게 두었다.
     ![virtual memory](https://camo.githubusercontent.com/c084a36a10fd735dc75966adbc9741480d43897f89a95a9e0ac7b30e0e968e09/68747470733a2f2f6e6f7465732e7368696368616f2e696f2f746c70692f6669677572655f362d312e706e67)
     - unallocated memory의 크기가 실제로 얼마나 되며 그 공간을 다 채우기 위해서는 얼마나 큰 데이터가 필요한지 알아보자!
+    
+---
 
 2. 변질
     - `unallocated memory의 크기가 실제로 얼마나 되며 그 공간을 다 채우기 위해서는 얼마나 큰 데이터가 필요한지 알아보자!`...라고 계획했으나...
@@ -170,6 +172,8 @@ unallocated memory 영역은 아까와 비슷하지만 address가 더 밑으로 
 ![after_un5](after_un5.png)
 
 이를 TB로 계산하니 약 734TB이며 이 것이 가상 메모리에서 heap 영역이 최대로 가질 수 있는 memory 크기인 것을 알 수 있다. 
+
+---
 
 4. 정리
 - 정리를 하기 위해 다음과 같은 코드를 작성하여 virtual memroy의 구조를 알아보았다. 
