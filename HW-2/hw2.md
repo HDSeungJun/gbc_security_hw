@@ -349,6 +349,8 @@ SECTION ._TEXT.__cstring align=1 noexecute              ; section number 2, data
 <details>
 <summary>my_hello.asm 코드</summary>
 <div markdown="1">
+    
+```assembly
 BITS 64
 global _start
 extern printf
@@ -377,7 +379,7 @@ _start:
 section     .data 
 message:
     db        "Hello, World", 10, "My name is "
-
+```
 </div>
 </details>
 
