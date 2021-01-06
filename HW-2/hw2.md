@@ -271,6 +271,7 @@ message:
 </details>
 
 - 실행 결과 
+
 ![hello_name](hello_name.png)
 
 ---
@@ -342,3 +343,43 @@ SECTION ._TEXT.__cstring align=1 noexecute              ; section number 2, data
 - 실행결과
 
 ![hello_option](hello_option.png)
+
+- 제가 한 것: 미완성 코드
+<details>
+<summary>my_hello.asm 코드</summary>
+<div markdown="1">
+BITS 64
+global _start
+extern printf
+section     .text 
+
+_start:
+    mov       rax, 1
+    mov       rdi, 1
+    mov       rsi, message
+    mov       rdx, 26
+    syscall
+    push    rbp 
+    mov     rbp, rsp 
+    add     rsp, 16
+    mov     rax, [rbp+16]
+    push    word[rax]
+    mov     rsi, rax 
+    mov     rax, 1
+    mov     rdi, 1
+    mov     rdx, 24
+    syscall
+    mov     rax, 60
+    mov     rdi, 0                                                                                                                             
+    syscall
+
+section     .data 
+message:
+    db        "Hello, World", 10, "My name is "
+
+</div>
+</details>
+
+- 실행결과 
+
+![my_hello](my_hello.png)
