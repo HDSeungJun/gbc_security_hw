@@ -55,7 +55,7 @@ _start:
     mov       rdx, 13   ; 13을 rdx register에 저장 
 ```
 피상적으로 봤을 때는 위의 코드는 아무 의미가 없는 코드이다. ~~우리를 괴롭히려고 넣은게 분명하다.~~ 하지만 그 다음 instruction을 보면 위의 작업이 왜 필요한지 알게 될 것이다.
-```assmebly
+```assembly
 syscall
 ```
 [Linux System call table](https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/) 을 살펴보면 rax register를 1로 초기화 시키는 것은 syscall에서 sys_write를 사용한다는 뜻이다. 
@@ -90,6 +90,7 @@ sys_exit으로 설정을 하고 syscall을 한 번 더 했기 때문에 프로�
 ~~즉, 쓸 데 없이 우리를 괴롭히려고 작성한 코드는 하나도 없었다. 외쳐 갓찬솔~!!~~
 
 이렇게 프로그램은 끝나지만 파일에는 남아있는 코드들이 있다.
+
 ```assembly
 section   .data
 message:
@@ -197,7 +198,7 @@ _start:
 ```
 코드에 주석을 달았지만 추가설명이 필요할 것 같다. strlen 함수를 호출하기 전에 rdi msg를 저장하였다. 그리고 strlen 함수 처음은 `mov rax, 0`이다. ~~즉, strlen 함수는 msg를 읽는 것이다.~~ 
 
-```
+```assembly
 section .data
     msg db "hello",0xA,0        
     len db 0,0xA         
@@ -250,7 +251,7 @@ My name is {자신의이름}
 <summary>hello_name.asm 코드</summary>
 <div markdown="1">
 
-```
+```assembly
  global    _start
 section   .text
 _start:
@@ -282,7 +283,7 @@ message:
 Hello, World
 My name is chansol
 ```
-~~제가 하긴 했는데 제가 한 건 아닙니다...~~~
+~~제가 하긴 했는데 제가 한 건 아닙니다...~~
 <details>
 <summary>hello_option.asm 코드</summary>
 <div markdown="1">
