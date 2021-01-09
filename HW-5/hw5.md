@@ -31,7 +31,7 @@
 
 ---
 
-<h2 style="color:yellow">Yellow</h2>
+- <h2 style="color:yellow;">Yellow</h2>
 
     - yellow function 
 
@@ -51,10 +51,10 @@
     
     ![2](yellow/2.png)
 
-    정답이였다... ~~(다행히도 지구를 하나만 폭발시키고 노란선을 제거할 수 있었다..)~~
+    정답이였다... ~~(다행히도 지구를 하나만 폭발시키고 노란선을 제거할 수 있었다...)~~
 
     암호풀이를 해보니 입력한 문자열을 한 바이트씩 가져와 비교하는 방식이었다. 
 
 ---
 
-- <h2 style="color:blue">Blue </h2>    
+- <h2 style="color:blue;">Blue </h2>    
