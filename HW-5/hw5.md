@@ -31,7 +31,7 @@
 
 ---
 
-- <h2><span style="color:yellow">Yellow</span></h2>
+- <h2><span style="color: yellow;">Yellow</span></h2>
 
     - yellow function 
 
