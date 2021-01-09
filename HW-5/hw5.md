@@ -31,7 +31,7 @@
 
 ---
 
-- <h2 style="color:yellow;">Yellow</h2>
+- <h2 style="color:yellow">Yellow</h2>
 
     - yellow function 
 
@@ -55,6 +55,4 @@
 
     암호풀이를 해보니 입력한 문자열을 한 바이트씩 가져와 비교하는 방식이었다. 
 
----
-
-- <h2 style="color:blue;">Blue </h2>    
+---  
