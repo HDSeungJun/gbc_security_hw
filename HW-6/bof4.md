@@ -38,3 +38,4 @@ innocent와 KEY를 비교하는 부분인 cmp instruction으로 가서 `rbp-0x4`
 
 이제 bof5 유저 접속을 하여 알아낸 비밀번호를 입력하면 bof5 유저로 접속이 된다. 
 
+[BOF5:](https://github.com/HDSeungJun/gbc_security_hw/blob/main/HW-6/bof5.md)
