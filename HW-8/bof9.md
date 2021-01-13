@@ -29,8 +29,6 @@
 
 `ROPgadget.py --binary /tmp/2.23/lib/libc.so.6 | grep 'pop rdi ; ret'` 를 통해 'pop rdi ; ret'의 주소를 알 수 있다. (이 주소는 libc 시작점의 주소와의 거리이다.)
 
-6. ribc 주소
-
 ![7](img/7.png)
 
 그러므로 `vmmap` 을 통해 libc의 주소를 알아내어 5번에서 구한 'pop rid ; ret'의 주소를 더한다. 
