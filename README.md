@@ -16,4 +16,4 @@
 
 - [HW8:](https://github.com/HDSeungJun/gbc_security_hw/tree/main/HW-8)
 
-- [HW9:](https://github.com/HDSeungJun/gbc_security_hw/tree/main/HW-59)
+- [HW9:](https://github.com/HDSeungJun/gbc_security_hw/tree/main/HW-9)
